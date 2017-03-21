@@ -13,6 +13,7 @@
 		714B72421E814AC000C8E9B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 714B72401E814AC000C8E9B6 /* Main.storyboard */; };
 		714B724D1E814AC000C8E9B6 /* Time_RemainingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714B724C1E814AC000C8E9B6 /* Time_RemainingTests.swift */; };
 		714B72581E814AC000C8E9B6 /* Time_RemainingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714B72571E814AC000C8E9B6 /* Time_RemainingUITests.swift */; };
+		714B72671E81621A00C8E9B6 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 714B72661E81621A00C8E9B6 /* IOKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		714B72531E814AC000C8E9B6 /* Time RemainingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Time RemainingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		714B72571E814AC000C8E9B6 /* Time_RemainingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time_RemainingUITests.swift; sourceTree = "<group>"; };
 		714B72591E814AC000C8E9B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		714B72661E81621A00C8E9B6 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				714B72671E81621A00C8E9B6 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +82,7 @@
 				714B724B1E814AC000C8E9B6 /* Time RemainingTests */,
 				714B72561E814AC000C8E9B6 /* Time RemainingUITests */,
 				714B72381E814AC000C8E9B6 /* Products */,
+				714B72651E81621A00C8E9B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +124,14 @@
 				714B72591E814AC000C8E9B6 /* Info.plist */,
 			);
 			path = "Time RemainingUITests";
+			sourceTree = "<group>";
+		};
+		714B72651E81621A00C8E9B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				714B72661E81621A00C8E9B6 /* IOKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -505,6 +517,7 @@
 				714B725E1E814AC000C8E9B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		714B725F1E814AC000C8E9B6 /* Build configuration list for PBXNativeTarget "Time RemainingTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +526,7 @@
 				714B72611E814AC000C8E9B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		714B72621E814AC000C8E9B6 /* Build configuration list for PBXNativeTarget "Time RemainingUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +535,7 @@
 				714B72641E814AC000C8E9B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

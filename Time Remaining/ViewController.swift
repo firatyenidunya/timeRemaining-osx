@@ -8,56 +8,48 @@
 
 import Cocoa
 import Foundation
+import IOKit
+
 class ViewController: NSViewController {
     @IBOutlet var remainingTime: NSTextField!
 
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let fullString    = String(bash(command: "pmset",arguments: ["-g","batt"]))
-        
-        var fullStringArr = fullString?.components(separatedBy: "discharging;")
-        
-        let stringArr1 = fullStringArr?[1]
-        
-        fullStringArr = stringArr1?.components(separatedBy: "remaining present")
-        
-        let time = fullStringArr?[0]
-        
-        self.remainingTime.stringValue = time!
-    }
 
+        self.remainingTime.stringValue = getBatteryState()
+
+    }
+    
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
         }
     }
+ 
     
-    func shell(launchPath: String, arguments: [String]) -> String
+    func getBatteryState() -> String
     {
         let task = Process()
-        task.launchPath = launchPath
-        task.arguments = arguments
-        
         let pipe = Pipe()
+        task.launchPath = "/usr/bin/pmset"
+        task.arguments = ["-g", "batt"]
         task.standardOutput = pipe
         task.launch()
         
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
-        let output = String(data: data, encoding: String.Encoding.utf8)!
-        if output.characters.count > 0 {
-            //remove newline character.
-            let lastIndex = output.index(before: output.endIndex)
-            return output[output.startIndex ..< lastIndex]
+        let output = NSString(data: data, encoding: String.Encoding.utf8.rawValue) as! String
+        
+        let batteryArray = output.components(separatedBy: ";")
+        
+        let state = batteryArray[1].trimmingCharacters(in: NSCharacterSet.whitespaces).capitalized
+        let percent = String.init(batteryArray[0].components(separatedBy: ")")[1].trimmingCharacters(in: NSCharacterSet.whitespaces).characters.dropLast())
+        var remaining = String.init(batteryArray[2].characters.dropFirst().split(separator: " ")[0])
+        if(remaining == "(no"){
+            remaining = "Calculating"
         }
-        return output
+        return "%" + percent + "\n" + remaining + " " + state
     }
     
-    func bash(command: String, arguments: [String]) -> String {
-        let whichPathForCommand = shell(launchPath: "/bin/bash", arguments: [ "-l", "-c", "which \(command)" ])
-        return shell(launchPath: whichPathForCommand, arguments: arguments)
-    }
-
 }
 
