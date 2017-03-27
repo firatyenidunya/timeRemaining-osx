@@ -16,21 +16,22 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <customObject id="dPR-kF-bpZ" userLabel="Status Menu Controller" customClass="StatusMenuController" customModule="Time_Remaining" customModuleProvider="target">
             <connections>
-                <outlet property="statusMenu" destination="AYu-sK-qS6" id="9rq-ec-uA9"/>
+                <outlet property="statusMenu" destination="wqE-hP-gTC" id="5V3-eN-HKu"/>
             </connections>
         </customObject>
-        <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+        <menu id="wqE-hP-gTC" userLabel="Status Menu">
             <items>
-                <menuItem title="Quit" id="mBg-HH-3wd" userLabel="Quit">
+                <menuItem title="Quit" id="NUD-UJ-Aur" userLabel="Quit">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="quitClicked:" target="dPR-kF-bpZ" id="O1z-Rj-mNl"/>
+                        <action selector="quit:" target="dPR-kF-bpZ" id="rgg-4V-aCr"/>
                     </connections>
                 </menuItem>
             </items>
             <connections>
-                <outlet property="delegate" destination="dPR-kF-bpZ" id="8XI-6L-MIR"/>
+                <outlet property="delegate" destination="dPR-kF-bpZ" id="q9L-7m-bAz"/>
             </connections>
+            <point key="canvasLocation" x="55.5" y="165.5"/>
         </menu>
     </objects>
 </document>

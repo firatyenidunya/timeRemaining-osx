@@ -26,11 +26,11 @@ class StatusMenuController: NSObject {
         statusItem.title = getBatteryState()
         
     }
- 
-    @IBAction func quitClicked(_ sender: NSMenuItem) {
+    @IBAction func quit(_ sender: NSMenuItem) {
         NSApplication.shared().terminate(self)
 
     }
+ 
     
     func getBatteryState() -> String
     {
@@ -47,7 +47,7 @@ class StatusMenuController: NSObject {
         let batteryArray = output.components(separatedBy: ";")
         
         let state = batteryArray[1].trimmingCharacters(in: NSCharacterSet.whitespaces).capitalized
-        let percent = String.init(batteryArray[0].components(separatedBy: ")")[1].trimmingCharacters(in: NSCharacterSet.whitespaces).characters.dropLast())
+       // let percent = String.init(batteryArray[0].components(separatedBy: ")")[1].trimmingCharacters(in: NSCharacterSet.whitespaces).characters.dropLast())
         var remaining = String.init(batteryArray[2].characters.dropFirst().split(separator: " ")[0])
         if(remaining == "(no"){
             remaining = "Calculating"
