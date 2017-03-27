@@ -26,6 +26,9 @@ class StatusMenuController: NSObject {
         statusItem.title = getBatteryState()
         
     }
+    @IBAction func updateTimeRemaining(_ sender: NSMenuItem) {
+        statusItem.title = getBatteryState()
+    }
     @IBAction func quit(_ sender: NSMenuItem) {
         NSApplication.shared().terminate(self)
 

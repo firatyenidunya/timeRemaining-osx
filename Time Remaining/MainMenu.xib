@@ -21,10 +21,16 @@
         </customObject>
         <menu id="wqE-hP-gTC" userLabel="Status Menu">
             <items>
-                <menuItem title="Quit" id="NUD-UJ-Aur" userLabel="Quit">
+                <menuItem title="Update" id="NUD-UJ-Aur" userLabel="Update">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="quit:" target="dPR-kF-bpZ" id="rgg-4V-aCr"/>
+                        <action selector="updateTimeRemaining:" target="dPR-kF-bpZ" id="uSe-ul-7EK"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Quit" id="ras-Lt-uxc" userLabel="Quit">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quit:" target="dPR-kF-bpZ" id="OTd-h1-nPa"/>
                     </connections>
                 </menuItem>
             </items>
