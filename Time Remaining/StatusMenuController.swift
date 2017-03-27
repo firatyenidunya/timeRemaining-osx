@@ -10,23 +10,27 @@ import Cocoa
 import Foundation
 import IOKit
 
-class ViewController: NSViewController {
-    @IBOutlet var remainingTime: NSTextField!
+class StatusMenuController: NSObject {
+  
+    
+    @IBOutlet weak var statusMenu: NSMenu!
+    let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
 
-   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        self.remainingTime.stringValue = getBatteryState()
-
+    override init() {
+        super.init()
     }
     
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
+    override func awakeFromNib() {
+        statusItem.menu?.font = NSFont(name: "Monaco", size: 3)
+        statusItem.menu = statusMenu
+        statusItem.title = getBatteryState()
+        
     }
  
+    @IBAction func quitClicked(_ sender: NSMenuItem) {
+        NSApplication.shared().terminate(self)
+
+    }
     
     func getBatteryState() -> String
     {
@@ -48,7 +52,9 @@ class ViewController: NSViewController {
         if(remaining == "(no"){
             remaining = "Calculating"
         }
-        return "%" + percent + "\n" + remaining + " " + state
+     //   return "%" + percent + "\n" + remaining + " " + state
+
+        return   state + " " + remaining
     }
     
 }
