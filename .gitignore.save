@@ -21,6 +21,7 @@ xcuserdata/
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
+
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
@@ -31,49 +32,4 @@ xcuserdata/
 timeline.xctimeline
 playground.xcworkspace
 
-# Swift Package Manager
-#
-# Add this line if you want to avoid checking in source code from Swift Pac$
-# Packages/
-# Package.pins
-.build/
 
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-th$
-#
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Object$
-
-## Build generated
-build/
-DerivedData/
-.DS_Store
-## Various settings
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
-xcuserdata/
-
-## Other
-*.moved-aside
-*.xccheckout
-*.xcscmblueprint
-
-## Obj-C/Swift specific
-*.hmap
-*.ipa
-*.SYM.zip
-*.dSYM
-
-## Playgrounds
-timeline.xctimeline
-pla
