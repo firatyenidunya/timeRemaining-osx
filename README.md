@@ -1,5 +1,5 @@
 # timeRemaining-osxSierra
-The App calculates remaining time your macbook battery.
+This app calculates remaining time on your macbook battery.
 
 *System Tray when charged* <br />
 ![System Tray when charged](https://cloud.githubusercontent.com/assets/9661442/26754477/34d8d904-4884-11e7-823b-0228273b1093.png)
@@ -29,3 +29,5 @@ If you have a feature request, open an issue.</br>
 If you want to contribute, submit a pull request.</br>
 
 ## Contributors
+* **Firat Yenidunya** - [@firatyenidunya](https://github.com/firatyenidunya)
+* **Unal Kalkan** - [@unalkalkan](https://github.com/unalkalkan)
