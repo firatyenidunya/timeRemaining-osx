@@ -1,0 +1,13 @@
+language: objective-c
+
+branches:
+ only:
+ - master
+
+xcode_project: Time Remaining.xcodeproj
+xcode_scheme: Time RemainingTests
+osx_image: xcode7.3
+xcode_sdk: iphonesimulator8.3
+
+script:
+- xcodebuild clean build test -project Time\ Remaining.xcodeproj -scheme Time\ Remaining
