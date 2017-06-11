@@ -10,4 +10,4 @@ osx_image: xcode7.3
 xcode_sdk: iphonesimulator8.3
 
 script:
-- xcodebuild clean build test -project Time Remaining.xcodeproj -scheme Time RemainingTests
+- xcodebuild clean build test -project Time\ Remaining.xcodeproj -scheme Time\ RemainingTests
